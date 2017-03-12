@@ -9,9 +9,10 @@
 		 <p><h5>Call:</h5>(863) 595-5594 </p>
 		 <p><h5>Send an Email:</h5></p>
          <p><strong>Name:</strong> <input type = "text" name = "name" ng-model = "name" required></p>
-		 <span ng-show="myForm.name.$error.text">Not a valid name</span>
+		 <span ng-show="myForm.name.$error.required">Name required!</span>
          <p><strong>Email:</strong> <input type = "email" name="address" ng-model = "email" required></p>
 		 <span ng-show="myForm.address.$error.email">Not a valid e-mail address</span>
+		 <span ng-show="myForm.address.$error.required">E-mail address required!</span>
 		 <p><strong>Message:</strong> <textarea name="message" ng-model = "message"></textarea></p>	 
 		 <input type="submit" name="send" value="Send" />
       </div>
