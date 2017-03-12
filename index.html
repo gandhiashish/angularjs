@@ -3,13 +3,19 @@
       <title>AngularJS First Application</title>
    </head>
    <body>
-      <h1>Sample Application</h1>
-      
-      <div ng-app = "">
-         <p>Enter your Name: <input type = "text" ng-model = "name"></p>
-         <p>Hello <span ng-bind = "name"></span>!</p>
+      <h1>Contact US</h1>
+     <form name = 'myForm' ng-app = "" action="//formspree.io/ashish.d.gandhi@gmail.com" method="POST">
+      <div>
+		 <p><h5>Call:</h5>(863) 595-5594 </p>
+		 <p><h5>Send an Email:</h5></p>
+         <p><strong>Name:</strong> <input type = "text" name = "name" ng-model = "name" required></p>
+		 <span ng-show="myForm.name.$error.text">Not a valid name</span>
+         <p><strong>Email:</strong> <input type = "email" name="address" ng-model = "email" required></p>
+		 <span ng-show="myForm.address.$error.email">Not a valid e-mail address</span>
+		 <p><strong>Message:</strong> <textarea name="message" ng-model = "message"></textarea></p>	 
+		 <input type="submit" name="send" value="Send" />
       </div>
-      
+      </form>
       <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
       
    </body>
