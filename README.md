@@ -1,1 +1,1 @@
-# angularjs
+This repository is created for AngularJS sample code.
