@@ -41,7 +41,7 @@
 				<input class="form-control" id="address" type="email" placeholder="Email" 
 					name = "address" ng-model = "email" data-toggle="tooltip" data-placement="bottom" 
 					title="Please enter your emaill address here" required />
-				<span ng-show="myForm.address.$error.email">Please enter valid email</span>
+				<span ng-show="myForm.address.$error.email" class="alert alert-danger">Please enter valid email</span>
 			  </div>
 			</div>
 			<div class="form-group">
